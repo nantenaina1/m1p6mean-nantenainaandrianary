@@ -1,4 +1,4 @@
-  module.exports = {
-      database: "mongodb+srv://nantenaina:nantenaina$@cluster0-wjvqt.mongodb.net/test",
-      secret:"diary"
-  }
+module.exports = {
+  database: "mongodb+srv://admin:admin@cluster0-wjvqt.mongodb.net/test?retryWrites=true",
+  secret: "diary"
+}
