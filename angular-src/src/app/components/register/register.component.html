@@ -1,0 +1,41 @@
+<div class="cont">
+	<div class="row">
+		<div class="col-lg-8">
+		  <img src="assets/note.jpg">
+		</div>
+		<div class="col-lg-4">
+		  <form (ngSubmit)="onRegisterSubmit()">
+        <fieldset>
+          <legend>S'enregistrer</legend>
+          <hr>
+          <div class="control-group">
+            <div class="form-group">
+              <label for="exampleInputEmail1">Nom</label>
+              <input type="text" class="form-control" [(ngModel)]="lastname" name="lastname" placeholder="Nom">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Prénom</label>
+              <input type="text" class="form-control" [(ngModel)]="name" name="name" placeholder="Prénom">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputEmail1">Adresse Email</label>
+              <input type="email" class="form-control" [(ngModel)]="email" name="email"  aria-describedby="emailHelp" placeholder="ex : example@test.com">
+              <small id="emailHelp" class="form-text text-muted">N.B : Ne partager votre adresse email à personne</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Mot de passe</label>
+              <input type="password" class="form-control"  [(ngModel)]="password" name="password" placeholder="Mot de passe">
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Confirmer le mot de passe</label>
+              <input type="password" class="form-control"  [(ngModel)]="confirmer" name="confirmer"  placeholder="Confirmer le mot de passe">
+            </div>
+          
+            
+            <button type="submit" class="btn btn-primary mybtn">Enregistrer</button>
+          </div>
+        </fieldset>
+      </form>
+		</div>
+	</div>
+</div>

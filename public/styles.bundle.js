@@ -32,6 +32,38 @@ if(false) {
 
 /***/ }),
 
+/***/ "./node_modules/ng2-drag-drop/style.css":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./node_modules/ng2-drag-drop/style.css");
+if(typeof content === 'string') content = [[module.i, content, '']];
+// Prepare cssTransformation
+var transform;
+
+var options = {"hmr":true}
+options.transform = transform
+// add the styles to the DOM
+var update = __webpack_require__("./node_modules/style-loader/lib/addStyles.js")(content, options);
+if(content.locals) module.exports = content.locals;
+// Hot Module Replacement
+if(false) {
+	// When the styles change, update the <style> tags
+	if(!content.locals) {
+		module.hot.accept("!!../raw-loader/index.js!../postcss-loader/lib/index.js??embedded!./style.css", function() {
+			var newContent = require("!!../raw-loader/index.js!../postcss-loader/lib/index.js??embedded!./style.css");
+			if(typeof newContent === 'string') newContent = [[module.id, newContent, '']];
+			update(newContent);
+		});
+	}
+	// When the module is disposed, remove the <style> tags
+	module.hot.dispose(function() { update(); });
+}
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./node_modules/font-awesome/css/font-awesome.css":
 /***/ (function(module, exports) {
 
@@ -39,10 +71,17 @@ module.exports = "/*!\n *  Font Awesome 4.7.0 by @davegandy - http://fontawesome
 
 /***/ }),
 
+/***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./node_modules/ng2-drag-drop/style.css":
+/***/ (function(module, exports) {
+
+module.exports = "\r\n/* Draggable*/\r\n\r\n.drag-border {\r\n    border: #ff525b dashed 2px;\r\n}\r\n\r\n.drag-handle {\r\n    cursor: move; /* fallback if grab cursor is unsupported */\r\n    cursor: grab;\r\n    cursor: -webkit-grab;\r\n}\r\n\r\n.drag-handle:active { \r\n    cursor: grabbing;\r\n    cursor: -webkit-grabbing;\r\n}\r\n\r\n/* Droppable */\r\n\r\n.drag-hint-border {\r\n    border: #3c763d dashed 2px;\r\n}\r\n\r\n.drag-over-border {\r\n    border: #fbbc05 dashed 2px;\r\n}\r\n\r\n.drag-transit {\r\n    border: #3500FF dashed 2px;\r\n}"
+
+/***/ }),
+
 /***/ "./node_modules/raw-loader/index.js!./node_modules/postcss-loader/lib/index.js??embedded!./src/styles.css":
 /***/ (function(module, exports) {
 
-module.exports = "/* You can add global styles to this file, and also import other style files */\n"
+module.exports = "/* You can add global styles to this file, and also import other style files */\r\n"
 
 /***/ }),
 
@@ -551,7 +590,8 @@ if(false) {
 /***/ (function(module, exports, __webpack_require__) {
 
 __webpack_require__("./src/styles.css");
-module.exports = __webpack_require__("./node_modules/font-awesome/css/font-awesome.css");
+__webpack_require__("./node_modules/font-awesome/css/font-awesome.css");
+module.exports = __webpack_require__("./node_modules/ng2-drag-drop/style.css");
 
 
 /***/ })
