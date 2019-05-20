@@ -11,3 +11,8 @@ img {
     background: #561b14;
     border-color: #5f5c5c;
 }
+
+.flip {
+    -webkit-transform: scaleX(-1);
+    transform: scaleX(-1);
+  }

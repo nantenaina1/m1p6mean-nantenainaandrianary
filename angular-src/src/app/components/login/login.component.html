@@ -1,36 +1,35 @@
 <div class="cont">
-	<div class="row">
-    <!-- 
-		<div class="col-lg-8">
-		  <img src="assets/music2.jpg">
-    </div>
-    -->
+  <div class="row backimage">
+    <div class="col-lg-1"></div>
     <div class="col-lg-4">
-        <!-- <img src="assets/login1.jpg"> -->
+      <img src="assets/note.png" style="height: 700px;">
     </div>
     <div class="col-lg-4">
-        <form (submit)="onLoginSubmit()">
-            <fieldset>
-              <legend>Se connecter</legend>
-              <hr>
-              <div class="control-group">
-                
-                <div class="form-group">
-                  <label>Adresse Email</label>
-                  <input type="email" class="form-control" [(ngModel)]="email" name="email"  aria-describedby="emailHelp" placeholder="ex : example@test.com">
-                  <small id="emailHelp" class="form-text text-muted">N.B : Ne partager votre adresse email à personne</small>
-                </div>
-                <div class="form-group">
-                  <label for="exampleInputPassword1">Mot de passe</label>
-                  <input type="password" class="form-control" [(ngModel)]="password" name="password" placeholder="Mot de passe">
-                </div>         
-                <button type="submit" class="btn btn-primary mybtn">Se connecter</button>
-              </div>
-            </fieldset>
-          </form>
+      <form (submit)="onLoginSubmit()">
+        <fieldset>
+          <legend>Se connecter</legend>
+          <hr>
+          <div class="control-group">
+
+            <div class="form-group">
+              <label>Adresse Email</label>
+              <input type="email" class="form-control" [(ngModel)]="email" name="email" aria-describedby="emailHelp"
+                placeholder="ex : example@test.com">
+              <small id="emailHelp" class="form-text text-muted">N.B : Ne partager votre adresse email à
+                personne</small>
+            </div>
+            <div class="form-group">
+              <label for="exampleInputPassword1">Mot de passe</label>
+              <input type="password" class="form-control" [(ngModel)]="password" name="password"
+                placeholder="Mot de passe">
+            </div>
+            <button type="submit" class="btn btn-primary mybtn">Se connecter</button>
+          </div>
+        </fieldset>
+      </form>
     </div>
-		<div class="col-lg-4">
-        <!-- <img src="assets/son2.png"> -->
-		</div>
-	</div>
+    <div class="col-lg-2">
+      <!-- <img class="flip" src="assets/login1.png" style="height: 700px;"> -->
+    </div>
+  </div>
 </div>
